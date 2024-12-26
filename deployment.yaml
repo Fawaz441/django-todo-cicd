@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: todo-app
+          imagePullPolicy: Always
           image: fawaz441/django-todo-cicd:latest
           ports:
             - containerPort: 8000
