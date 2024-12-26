@@ -1,8 +1,8 @@
-FROM python:3
+FROM python:3.12 as build
 RUN pip install django
-RUN pip install setuptools
 
 COPY . .
+
 
 RUN python manage.py migrate
 EXPOSE 8000
